@@ -4,6 +4,11 @@
 (add-to-list 'default-frame-alist
 	     '(font . "DejaVu Sans Mono-10"))
 
+;; load theme
+(add-to-list 'custom-theme-load-path
+	     (concat user-emacs-directory "gruvbox-dark-soft-theme"))
+(load-theme 'gruvbox-dark-soft t)
+
 ;; turn off toolbar, menubar, scrollbar
 (tool-bar-mode -1)
 (menu-bar-mode -1)
