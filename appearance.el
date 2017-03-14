@@ -25,4 +25,10 @@
 ;; highlight the current line
 (global-hl-line-mode t)
 
+;; shows start and finish of buffer text with arrows
+;(setq-default indicate-buffer-boundaries 'left)
+
+;; shows empty lines at the bottom of buffer
+;(setq-default indicate-empty-lines t)
+
 ;;; appearance.el ends here

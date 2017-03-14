@@ -28,12 +28,6 @@
 (setq initial-major-mode 'text-mode)
 (setq initial-scratch-message "Welcome to GNU/Emacs!!!")
 
-;; shows start and finish of buffer text with arrows
-;(setq-default indicate-buffer-boundaries 'left)
-
-;; shows empty lines at the bottom of buffer
-;(setq-default indicate-empty-lines t)
-
 ;; store all backup and autosave files in a emacs-backups dir
 (setq backup-directory-alist
       `((".*" . "~/.emacs-backups")))

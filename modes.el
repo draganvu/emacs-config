@@ -35,7 +35,22 @@
 (require 'markdown-mode)
 (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
 
-; enable web mode
+;; enable magit
+(require 'magit)
+(global-set-key (kbd "C-x g") 'magit-status)
+
+;; enable web mode
+(require 'web-mode)
+(add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
+
+(defun my-web-hooks-mode ()
+  "Hooks for Web mode"
+  (setq web-mode-markup-indent-offset 2)
+  (setq web-mode-code-indent-offset 2))
+
+(add-hook 'web-mode-hook 'my-web-mode-hook)
+  
+;; enable 
 
 
 

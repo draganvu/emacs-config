@@ -14,7 +14,8 @@
     magit
     markdown-mode
     rainbow-mode
-    smex)
+    smex
+    web-mode)
   "Packages to be installed when Emacs is launched")
 
 (defun install-my-packages ()
