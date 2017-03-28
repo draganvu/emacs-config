@@ -37,4 +37,8 @@
 ;; warn when opening files bigger than 100MB
 (setq large-file-warning-threshold 100000000)
 
+;; set user name and email
+(setq user-full-name "Dragan Vujović"
+      user-mail-address "dvujovic@protonmail.ch")
+
 ;;; settings.el ends here
