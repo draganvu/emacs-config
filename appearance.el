@@ -2,7 +2,7 @@
 
 ;; set font
 (add-to-list 'default-frame-alist
-	     '(font . "DejaVu Sans Mono-10"))
+	     '(font . "DejaVu Sans Mono-12"))
 
 ;; load theme
 ;(add-to-list 'custom-theme-load-path
