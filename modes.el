@@ -26,10 +26,10 @@
 (global-set-key (kbd "C-c f") 'ido-recentf-open)
 
 ;; hack for ubuntu 16.10 // TO DO: investigate where .el file should be.
-(load-file "/usr/share/emacs/site-lisp/ratpoison.el")
+;(load-file "/usr/share/emacs/site-lisp/ratpoison.el")
 ;; enable ratpoison mode
-(require 'ratpoison)
-(add-to-list 'auto-mode-alist '("\\.ratpoisonrc$" . ratpoisonrc-mode))
+;(require 'ratpoison)
+;(add-to-list 'auto-mode-alist '("\\.ratpoisonrc$" . ratpoisonrc-mode))
 
 ;; enable markdown mode
 (require 'markdown-mode)
