@@ -1,4 +1,4 @@
-;;; packages.el
+;;; core-packages.el
 
 (require 'package)
 
@@ -30,4 +30,6 @@
 
 (install-my-packages)
 
-;;; packages.el ends here
+(provide 'core-packages)
+
+;;; core-packages.el ends here

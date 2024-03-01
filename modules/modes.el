@@ -52,6 +52,6 @@
   
 ;; enable 
 
-
+(provide 'modes)
 
 ;;; modes.el ends here

@@ -1,8 +1,8 @@
-;;; appearance.el
+;;; core-ui.el
 
 ;; set font
 (add-to-list 'default-frame-alist
-	     '(font . "DejaVu Sans Mono-12"))
+	     '(font . "DejaVu Sans Mono-14"))
 
 ;; load theme
 ;(add-to-list 'custom-theme-load-path
@@ -31,4 +31,6 @@
 ;; shows empty lines at the bottom of buffer
 ;(setq-default indicate-empty-lines t)
 
-;;; appearance.el ends here
+(provide 'core-ui)
+
+;;; core-ui.el ends here

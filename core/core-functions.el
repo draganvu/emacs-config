@@ -1,4 +1,4 @@
-;;; functions.el
+;;; core-functions.el
 
 (defun move-line-up ()
   "Move the current line up."
@@ -15,4 +15,6 @@
   (forward-line -1)
   (indent-according-to-mode))
 
-;;; functions.el ends here
+(provide 'core-functions)
+
+;;; core-functions.el ends here

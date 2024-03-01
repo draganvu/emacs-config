@@ -1,4 +1,4 @@
-;;; settings.el
+;;; core-settings.el
 
 ;; ensure UTF-8 is used
 (set-language-environment 'UTF-8)
@@ -7,6 +7,10 @@
 (set-keyboard-coding-system 'utf-8)
 (prefer-coding-system 'utf-8)
 (setq default-buffer-file-coding-system 'utf-8-unix)
+
+;; set user name and email
+(setq user-full-name "Dragan Vujović"
+      user-mail-address "dvujovic@protonmail.ch")
 
 ;; show keystrokes in minibuffer in realtime
 (setq echo-keystrokes 0.1)
@@ -37,8 +41,9 @@
 ;; warn when opening files bigger than 100MB
 (setq large-file-warning-threshold 100000000)
 
-;; set user name and email
-(setq user-full-name "Dragan Vujović"
-      user-mail-address "dvujovic@protonmail.ch")
+;; disable bell sound
+(setq ring-bell-function 'ignore)
 
-;;; settings.el ends here
+(provide 'core-settings)
+
+;;; core-settings.el ends here
