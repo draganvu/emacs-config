@@ -7,7 +7,11 @@
 ;; load theme
 ;(add-to-list 'custom-theme-load-path
 ;	     (concat user-emacs-directory "gruvbox-dark-soft-theme"))
-;(load-theme 'gruvbox-dark-soft t)
+					;(load-theme 'gruvbox-dark-soft t)
+
+(use-package zenburn-theme
+  :ensure t
+  :config (load-theme 'zenburn t))
 
 ;; turn off toolbar, menubar, scrollbar
 (tool-bar-mode -1)

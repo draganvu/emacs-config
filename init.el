@@ -1,8 +1,8 @@
 ;;; init.el --- My Emacs configuration entry point 
 
-;; Copyright (C) 2017-2024 Dragan Vujovic <dvujovic@protonmail.ch>
+;; Copyright (C) 2017-2024 Dragan Vujović <dvujovic@protonmail.ch>
 
-;; Author: Dragan Vujovic
+;; Author: Dragan Vujović
 ;; URL: https://github.com/draganvu/emacs-config
 
 ;; This program is free software: you can redistribute it and/or modify
@@ -26,20 +26,31 @@
 (setq load-prefer-newer t)
 
 ;(setq gc-cons-threshold 50000000)
-(setq package--init-file-ensured t)
+;(setq package--init-file-ensured t)
+
 (setq custom-file "~/.emacs.d/custom.el")
 (load custom-file 'noerror)
 
+;; define emacs directory structure
+(defvar emacs-core-dir (expand-file-name "core" user-emacs-directory)
+  "This directory contains Emacs core functionality files.")
+(defvar emacs-modules-dir (expand-file-name "modules" user-emacs-directory)
+  "This directory contains Emacs modules files for programming languages.")
 
-(add-to-list 'load-path (expand-file-name "core" user-emacs-directory))
-(add-to-list 'load-path (expand-file-name "modules" user-emacs-directory))
+;; set load paths
+(add-to-list 'load-path emacs-core-dir)
+(add-to-list 'load-path emacs-modules-dir)
 
+;; core files
 (require 'core-packages)
+(require 'core-init)
 (require 'core-ui)
+(require 'core-completition)
 (require 'core-settings)
-(require 'core-keys)
 (require 'core-functions)
+(require 'core-keys)
 
+;; module files
 (require 'modes)
 
 ;;; init.el ends here

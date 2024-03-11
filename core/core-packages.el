@@ -1,34 +1,17 @@
-;;; core-packages.el
+;;; core-packages.el --- Emacs package management
 
 (require 'package)
 
-(add-to-list 'package-archives
-	     '("melpa-stable" . "https://stable.melpa.org/packages/") t)
-(add-to-list 'package-archives
-	     '("gnu" . "http://elpa.gnu.org/packages/"))
+(add-to-list 'package-archives '("gnu"   . "https://elpa.gnu.org/packages/"))
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
 
 (package-initialize)
 
-(defvar my-required-packages
-  '(ido-vertical-mode
-    magit
-    markdown-mode
-    rainbow-mode
-    smex
-    web-mode)
-  "Packages to be installed when Emacs is launched")
+(unless (package-installed-p 'use-package)
+  (package-refresh-contents)
+  (package-install 'use-package))
 
-(defun install-my-packages ()
-  "Ensure packages I used are installed"
-  (interactive)
-  (let ((missing-packages (cl-remove-if
-			   #'package-installed-p my-required-packages)))
-    (when missing-packages
-      (message "Installing %d missing packages" (length missing-packages))
-      (package-refresh-contents)
-      (mapc #'package-install missing-packages))))
-
-(install-my-packages)
+(setq use-package-always-ensure t)
 
 (provide 'core-packages)
 
