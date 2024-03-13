@@ -41,16 +41,20 @@
 (add-to-list 'load-path emacs-core-dir)
 (add-to-list 'load-path emacs-modules-dir)
 
-;; core files
+;; load core files
 (require 'core-packages)
 (require 'core-init)
 (require 'core-ui)
 (require 'core-completition)
 (require 'core-settings)
+(require 'core-utils)
 (require 'core-functions)
 (require 'core-keys)
 
-;; module files
-(require 'modes)
+;; load module files
+(require 'rc-magit)
+(require 'rc-web)
+(require 'rc-markdown)
+(require 'rc-yaml)
 
 ;;; init.el ends here
