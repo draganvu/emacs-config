@@ -1,4 +1,4 @@
-;;; core-completition.el
+;;; core-completition.el --- My completition frameworks for Emacs
 
 ;; enable ido mode
 (use-package ido-vertical-mode

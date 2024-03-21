@@ -22,26 +22,23 @@
 
 ;; My Emacs configuation
 
-;; always load newest byte code
+;; Always load newest byte code
 (setq load-prefer-newer t)
-
-;(setq gc-cons-threshold 50000000)
-;(setq package--init-file-ensured t)
 
 (setq custom-file "~/.emacs.d/custom.el")
 (load custom-file 'noerror)
 
-;; define emacs directory structure
+;; Define emacs directory structure
 (defvar emacs-core-dir (expand-file-name "core" user-emacs-directory)
   "This directory contains Emacs core functionality files.")
 (defvar emacs-modules-dir (expand-file-name "modules" user-emacs-directory)
   "This directory contains Emacs modules files for programming languages.")
 
-;; set load paths
+;; Set load paths
 (add-to-list 'load-path emacs-core-dir)
 (add-to-list 'load-path emacs-modules-dir)
 
-;; load core files
+;; Load core files
 (require 'core-packages)
 (require 'core-init)
 (require 'core-ui)
@@ -51,10 +48,10 @@
 (require 'core-functions)
 (require 'core-keys)
 
-;; load module files
+;; Load module files
 (require 'rc-magit)
-(require 'rc-web)
 (require 'rc-markdown)
+(require 'rc-web)
 (require 'rc-yaml)
 
 ;;; init.el ends here
