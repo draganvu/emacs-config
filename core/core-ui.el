@@ -1,10 +1,10 @@
 ;;; core-ui.el
 
-;; set font
+;; Set font
 (add-to-list 'default-frame-alist
 	     '(font . "DejaVu Sans Mono-14"))
 
-;; load theme
+;; Load theme
 ;(add-to-list 'custom-theme-load-path
 ;	     (concat user-emacs-directory "gruvbox-dark-soft-theme"))
 					;(load-theme 'gruvbox-dark-soft t)
@@ -13,27 +13,21 @@
   :ensure t
   :config (load-theme 'zenburn t))
 
-;; turn off toolbar, menubar, scrollbar
+;; Turn off toolbar, menubar, scrollbar
 (tool-bar-mode -1)
 (menu-bar-mode -1)
 (scroll-bar-mode -1)
 
-;; mode line settings
+;; Mode line settings
 (line-number-mode t)
 (column-number-mode t)
 (size-indication-mode t)
 
-;; change cursor to a horizontal bar
+;; Change cursor to a horizontal bar
 (setq-default cursor-type 'bar)
 
-;; highlight the current line
+;; Highlight the current line
 (global-hl-line-mode t)
-
-;; shows start and finish of buffer text with arrows
-;(setq-default indicate-buffer-boundaries 'left)
-
-;; shows empty lines at the bottom of buffer
-;(setq-default indicate-empty-lines t)
 
 (provide 'core-ui)
 

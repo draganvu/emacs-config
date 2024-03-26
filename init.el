@@ -25,9 +25,6 @@
 ;; Always load newest byte code
 (setq load-prefer-newer t)
 
-(setq custom-file "~/.emacs.d/custom.el")
-(load custom-file 'noerror)
-
 ;; Define emacs directory structure
 (defvar emacs-core-dir (expand-file-name "core" user-emacs-directory)
   "This directory contains Emacs core functionality files.")
@@ -49,6 +46,7 @@
 (require 'core-keys)
 
 ;; Load module files
+(require 'rc-latex)
 (require 'rc-magit)
 (require 'rc-markdown)
 (require 'rc-web)
