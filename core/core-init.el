@@ -16,6 +16,12 @@
 (setq custom-file (expand-file-name "custom.el" emacs-savefile-dir))
 (load custom-file 'noerror)
 
+;; Store all backup and autosave files in a emacs-backups dir
+(setq backup-directory-alist
+      `((".*" . "~/.emacs.d/.emacs-backups")))
+(setq auto-save-file-name-transforms
+      `((".*" , "~/.emacs.d/.emacs-backups" t)))
+
 (provide 'core-init)
 
 ;;; core-init.el ends here

@@ -16,6 +16,12 @@
   (global-set-key (kbd "M-x") 'smex)
   (global-set-key (kbd "M-X") 'smex-major-mode-commands))
 
+;; Enable Company mode
+(use-package company
+  :config
+  (setq company-idle-delay 0.5)
+  (global-company-mode))
+
 (provide 'core-completition)
 
 ;;; core-completition.el ends here

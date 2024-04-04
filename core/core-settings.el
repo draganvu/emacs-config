@@ -32,12 +32,6 @@
 (setq initial-major-mode 'text-mode)
 (setq initial-scratch-message "Welcome to GNU/Emacs!!!")
 
-;; Store all backup and autosave files in a emacs-backups dir
-(setq backup-directory-alist
-      `((".*" . "~/.emacs-backups")))
-(setq auto-save-file-name-transforms
-      `((".*" , "~/.emacs-backups" t)))
-
 ;; Warn when opening files bigger than 100MB
 (setq large-file-warning-threshold 100000000)
 

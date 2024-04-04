@@ -20,7 +20,7 @@
 
 ;;; Commentary:
 
-;; My Emacs configuation
+;; My Emacs configuration
 
 ;; Always load newest byte code
 (setq load-prefer-newer t)
@@ -43,12 +43,14 @@
 (require 'core-settings)
 (require 'core-utils)
 (require 'core-functions)
+;(require 'core-transient)
 (require 'core-keys)
 
 ;; Load module files
 (require 'rc-latex)
 (require 'rc-magit)
 (require 'rc-markdown)
+(require 'rc-scripts)
 (require 'rc-web)
 (require 'rc-yaml)
 
