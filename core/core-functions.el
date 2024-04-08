@@ -16,29 +16,26 @@
   (indent-according-to-mode))
 
 (defun create-scratch-buffer (mode)
+  "Create a new scratch buffer in the specified mode and switch to it."
   (let ((buffer (generate-new-buffer "*scratch*")))
     (with-current-buffer buffer
-      (cond
-       ((equal mode 'org) (org-mode))
-       ((equal mode 'latex) (latex-mode))
-       ((equal mode 'elisp) (emacs-lisp-mode))
-       (t (message "Invalid mode specified"))))
+      (funcall mode))
     (switch-to-buffer buffer)))
 
 (defun create-scratch-org-buffer ()
   "Create a new Org-mode scratch buffer."
   (interactive)
-  (create-scratch-buffer 'org))
+  (create-scratch-buffer 'org-mode))
 
 (defun create-scratch-latex-buffer ()
   "Create a new LaTeX scratch buffer."
   (interactive)
-  (create-scratch-buffer 'latex))
+  (create-scratch-buffer 'latex-mode))
 
 (defun create-scratch-elisp-buffer ()
   "Create a new Emacs Lisp scratch buffer."
   (interactive)
-  (create-scratch-buffer 'elisp))
+  (create-scratch-buffer 'emacs-lisp-mode))
 
 (provide 'core-functions)
 

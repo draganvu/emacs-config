@@ -21,6 +21,9 @@
 ;; Ensure all packages are installed automatically
 (setq use-package-always-ensure t)
 
+;; Install diminish package to keep modeline tidy
+(use-package diminish)
+
 (provide 'core-packages)
 
 ;;; core-packages.el ends here

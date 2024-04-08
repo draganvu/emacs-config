@@ -17,11 +17,16 @@
 (global-set-key (kbd "C-c r") 'ido-recentf-open)
 
 (use-package which-key
+  :diminish which-key-mode
   :config
   (setq which-key-idle-delay 3)
   (which-key-mode 1))
 
+;; Colorize color names
 (use-package rainbow-mode)
+
+;; Remove `ElDoc' from modeline
+(diminish 'eldoc-mode)
 
 (provide 'core-utils)
 
