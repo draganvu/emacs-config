@@ -1,8 +1,8 @@
 ;;; init.el --- My Emacs configuration entry point 
 
-;; Copyright (C) 2017-2024 Dragan Vujović <dvujovic@protonmail.ch>
+;; Copyright (C) 2017-2024 Dragan Vujović
 
-;; Author: Dragan Vujović
+;; Author: Dragan Vujović <dvujovic@protonmail.ch>
 ;; URL: https://github.com/draganvu/emacs-config
 
 ;; This program is free software: you can redistribute it and/or modify
@@ -30,6 +30,8 @@
   "This directory contains Emacs core functionality files.")
 (defvar emacs-modules-dir (expand-file-name "modules" user-emacs-directory)
   "This directory contains Emacs modules files for programming languages.")
+(defvar emacs-themes-dir (expand-file-name "themes" user-emacs-directory)
+  "This directory contains my Emacs themes.")
 
 ;; Set load paths
 (add-to-list 'load-path emacs-core-dir)

@@ -4,14 +4,9 @@
 (add-to-list 'default-frame-alist
 	     '(font . "DejaVu Sans Mono-14"))
 
-;; Load theme
-;(add-to-list 'custom-theme-load-path
-;	     (concat user-emacs-directory "gruvbox-dark-soft-theme"))
-					;(load-theme 'gruvbox-dark-soft t)
-
-(use-package zenburn-theme
-  :ensure t
-  :config (load-theme 'zenburn t))
+;; Load personal theme
+(add-to-list 'custom-theme-load-path emacs-themes-dir)
+(load-theme 'zemun t)
 
 ;; Turn off toolbar, menubar, scrollbar
 (tool-bar-mode -1)
