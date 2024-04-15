@@ -56,4 +56,9 @@
 (require 'rc-web)
 (require 'rc-yaml)
 
+;; Display startup time in message area
+(defun display-startup-echo-area-message ()
+  (message "GNU Emacs started in %s. For more information, type C-h C-a."
+	   (emacs-init-time)))
+
 ;;; init.el ends here
