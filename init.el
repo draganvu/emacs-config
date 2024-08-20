@@ -36,6 +36,7 @@
 ;; Set load paths
 (add-to-list 'load-path emacs-core-dir)
 (add-to-list 'load-path emacs-modules-dir)
+(add-to-list 'custom-theme-load-path emacs-themes-dir)
 
 ;; Load core files
 (require 'core-packages)
