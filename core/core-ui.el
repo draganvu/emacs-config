@@ -7,14 +7,12 @@
 ;; Load personal theme or theme from melpa if personal theme is not found
 (use-package dracula-theme)
 
-(defun load-mytheme ()
-  "Load my personal theme Zemun if found else load Dracula theme"
-  (let ((theme-file (expand-file-name "zemun-theme.el" emacs-themes-dir)))
-    (if (file-exists-p theme-file)
-	(load-theme 'zemun t)
-      (load-theme 'dracula t))))
-
-(add-hook 'emacs-startup-hook 'load-mytheme)
+;; Load my personal theme Zemun if found else load Dracula theme"
+;; To remove when Zemun theme is finished
+(let ((theme-file (expand-file-name "zemun-theme.el" emacs-themes-dir)))
+  (if (file-exists-p theme-file)
+      (load-theme 'zemun t)
+    (load-theme 'dracula t)))
 
 ;; Turn off toolbar, menubar, scrollbar
 (tool-bar-mode -1)
