@@ -5,12 +5,8 @@
   "This directory stores all the automatically generated save/history files.")
 
 ;; Create savefile directory
-(defun make-savefile-dir ()
-  "Create directory only if it doesn't exist."
-  (unless (file-exists-p emacs-savefile-dir)
-    (make-directory emacs-savefile-dir)))
-
-(add-hook 'emacs-startup-hook 'make-savefile-dir)
+(unless (file-exists-p emacs-savefile-dir)
+  (make-directory emacs-savefile-dir))
 
 ;; Set location of customize file
 (setq custom-file (expand-file-name "custom.el" emacs-savefile-dir))
